@@ -1,0 +1,74 @@
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# Tauri
+src-tauri/target/
+src-tauri/Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Node.js (if using frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+*.dmg
+*.deb
+*.rpm
+*.AppImage
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Documentation downloads (keep structure, ignore content)
+frmwrx-harvester/docs/*/*.md
+
+# Vector database files
+*.faiss
+*.faiss.index
+*.faiss.metadata
+
+# Test data
+test_data/
+*.pdf
+*.docx
+*.txt
+
+# Backup files
+*.bak
+*.backup 
