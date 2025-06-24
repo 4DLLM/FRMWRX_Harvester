@@ -1,0 +1,116 @@
+# FRMWRX Harvester - Professional .gitignore
+
+# Build artifacts
+/target/
+/frmwrx-harvester/target/
+Cargo.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+/frmwrx-harvester/ui/dist/
+/frmwrx-harvester/ui/build/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Application data
+/data/
+/logs/
+*.log
+
+# Configuration files with secrets
+config.json
+secrets.json
+credentials.json
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+.cache/
+
+# Documentation builds
+/docs/_build/
+/docs/.doctrees/
+
+# Test coverage
+/coverage/
+*.coverage
+.nyc_output/
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Large binary files
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Platform specific
+*.exe
+*.msi
+*.dmg
+*.deb
+*.rpm
+*.AppImage
+
+# Lock files (except package-lock.json for reproducible builds)
+yarn.lock
+pnpm-lock.yaml
+
+# Rust
+**/*.rs.bk
+*.pdb
+
+# Tauri
+src-tauri/target/
+src-tauri/Cargo.lock
+
+# Logs
+logs/
+
+# Documentation downloads (keep structure, ignore content)
+frmwrx-harvester/docs/*/*.md
+
+# Vector database files
+*.faiss
+*.faiss.index
+*.faiss.metadata
+
+# Test data
+test_data/
+*.pdf
+*.docx
+*.txt
+
+# Temporary files
+temp/
+tmp/ 

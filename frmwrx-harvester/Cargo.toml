@@ -1,0 +1,55 @@
+[package]
+name = "frmwrx-harvester"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Core runtime
+tokio = { version = "1.35", features = ["full"] }
+
+# GUI framework
+tauri = { version = "1.5", features = ["dialog-open", "dialog-save", "fs-create-dir", "fs-exists", "fs-read-dir", "fs-read-file", "fs-remove-dir", "fs-remove-file", "fs-write-file", "http-request", "shell-open"] }
+
+# HTTP client
+reqwest = { version = "0.11", features = ["json", "stream"] }
+
+# Document processing (optional for initial build)
+# poppler-rs = { version = "0.23", optional = true }
+
+# Vector database (using in-memory implementation for now)
+# faiss = { version = "0.1", optional = true }
+
+# Utilities
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4.0", features = ["derive"] }
+futures = "0.3"
+scraper = "0.18"
+uuid = { version = "1.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+url = "2.4"
+regex = "1.10"
+
+# Additional dependencies for testing
+tempfile = { version = "3.8", optional = true }
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
+pdf-support = []  # Enable when poppler-rs is available
+faiss-support = []  # Enable when faiss is available
+testing = ["tempfile"]
+
+[dev-dependencies]
+tempfile = "3.8"
+
+[[bin]]
+name = "frmwrx-harvester"
+path = "src/main.rs"
